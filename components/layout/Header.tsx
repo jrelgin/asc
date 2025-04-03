@@ -1,13 +1,19 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import React from 'react';
 
 const Header = () => {
   return (
     <header className="py-4 px-6 md:px-12 flex justify-between items-center bg-white">
       <div className="logo">
-        {/* Logo placeholder - replace with actual logo */}
-        <Link href="/" className="text-xl font-bold">
-          Our Community
+        <Link href="/">
+          <Image 
+            src="/assets/images/wordMark.svg" 
+            alt="Logo" 
+            width={180} 
+            height={32} 
+            className="h-8 w-auto" 
+          />
         </Link>
       </div>
       <nav className="hidden md:flex space-x-6">

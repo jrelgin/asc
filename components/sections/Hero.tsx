@@ -12,12 +12,12 @@ const Hero = () => {
       href: '#process',
     },
     images: [
-      { src: '/placeholder-1.jpg', alt: 'Community member working' },
-      { src: '/placeholder-2.jpg', alt: 'Community collaboration' },
-      { src: '/placeholder-3.jpg', alt: 'Community workspace' },
-      { src: '/placeholder-4.jpg', alt: 'Community event' },
-      { src: '/placeholder-5.jpg', alt: 'Community member at computer' },
-      { src: '/placeholder-6.jpg', alt: 'Community meeting' },
+      { src: '/assets/images/temp4hero/66e871553b799f9c879a2407_new-p-800.jpg', alt: 'Community member working' },
+      { src: '/assets/images/temp4hero/66e871553b799f9c879a2407_new-p-800.jpg', alt: 'Community collaboration' },
+      { src: '/assets/images/temp4hero/66e871553b799f9c879a2407_new-p-800.jpg', alt: 'Community workspace' },
+      { src: '/assets/images/temp4hero/66e871553b799f9c879a2407_new-p-800.jpg', alt: 'Community event' },
+      { src: '/assets/images/temp4hero/66e871553b799f9c879a2407_new-p-800.jpg', alt: 'Community member at computer' },
+      { src: '/assets/images/temp4hero/66e871553b799f9c879a2407_new-p-800.jpg', alt: 'Community meeting' },
     ]
   };
 

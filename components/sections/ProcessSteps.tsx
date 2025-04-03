@@ -4,50 +4,54 @@ import StepCard from '../ui/StepCard';
 const ProcessSteps = () => {
   // This would eventually come from TinaCMS
   const content = {
-    title: 'Be a Part of it',
-    description: 'Follow these simple steps to join our community.',
+    title: 'Be a Part of It',
+    description: 'At Atlanta Solopreneurs, we empower local entrepreneurs to thrive. Discover new opportunities, build connections, and grow your business with us.',
     steps: [
       {
-        number: 1,
         title: 'Get the newsletter',
-        description: 'Sign up to receive our weekly updates and community news.',
-        icon: '/icons/newsletter.svg'
+        description: "Here's where you'll get all your updates on other members, upcoming events and cool stuff happening in Atlanta we think you should know about. You can also promote your own stuff!",
+        icon: '/assets/icons/layout.svg',
+        linkText: 'Subscribe',
+        linkUrl: '#subscribe'
       },
       {
-        number: 2,
         title: 'Join the Slack',
-        description: 'Connect with community members and join the conversation.',
-        icon: '/icons/slack.svg'
+        description: 'This the main place we hang out to get to know each other, start a conversation to ask or offer support and help us plan our next event.',
+        icon: '/assets/icons/convo.svg',
+        linkText: 'Join Slack',
+        linkUrl: '#slack'
       },
       {
-        number: 3,
-        title: 'Meet us in real life',
-        description: 'Attend our monthly meetups and special events.',
-        icon: '/icons/meetup.svg'
+        title: 'Meet up in real life',
+        description: "Come to an event or plan your own. Members create what they want to see. We'll help you promote it.",
+        icon: '/assets/icons/pinpoint.svg',
+        linkText: 'See Our Events',
+        linkUrl: '#events'
       }
     ]
   };
 
   return (
-    <section id="process" className="py-16 px-6 md:px-12 bg-white">
+    <section id="process" className="py-20 md:py-28 px-6 md:px-12 bg-white">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <div className="mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
             {content.title}
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-700 max-w-3xl">
             {content.description}
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-16">
           {content.steps.map((step, index) => (
             <StepCard
               key={index}
-              number={step.number}
               title={step.title}
               description={step.description}
               icon={step.icon}
+              linkText={step.linkText}
+              linkUrl={step.linkUrl}
             />
           ))}
         </div>

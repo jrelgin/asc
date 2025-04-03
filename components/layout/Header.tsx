@@ -3,6 +3,16 @@ import Image from 'next/image';
 import React from 'react';
 
 const Header = () => {
+  const scrollToSection = (sectionId: string) => (e: React.MouseEvent) => {
+    e.preventDefault();
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      // Update URL without page navigation
+      window.history.pushState({}, '', `/#${sectionId}`);
+    }
+  };
+
   return (
     <header className="py-4 px-6 md:px-12 flex justify-between items-center bg-white">
       <div className="logo">
@@ -17,26 +27,43 @@ const Header = () => {
         </Link>
       </div>
       <nav className="hidden md:flex space-x-6">
-        <Link href="#why-join" className="hover:text-green-500 transition-colors">
+        <a 
+          href="#why-join" 
+          onClick={scrollToSection('why-join')} 
+          className="hover:text-brand-primary transition-colors cursor-pointer"
+        >
           Why Join?
-        </Link>
-        <Link href="#who-we-are" className="hover:text-green-500 transition-colors">
+        </a>
+        <a 
+          href="#who-we-are" 
+          onClick={scrollToSection('who-we-are')} 
+          className="hover:text-brand-primary transition-colors cursor-pointer"
+        >
           Who We Are
-        </Link>
-        <Link href="#process" className="hover:text-green-500 transition-colors">
+        </a>
+        <a 
+          href="#process" 
+          onClick={scrollToSection('process')} 
+          className="hover:text-brand-primary transition-colors cursor-pointer"
+        >
           Process
-        </Link>
-        <Link href="#organizers" className="hover:text-green-500 transition-colors">
+        </a>
+        <a 
+          href="#organizers" 
+          onClick={scrollToSection('organizers')} 
+          className="hover:text-brand-primary transition-colors cursor-pointer"
+        >  
           Organizers
-        </Link>
+        </a>
       </nav>
       <div className="flex space-x-4">
-        <Link 
+        <a 
           href="#slack" 
-          className="bg-[#0FD18B] text-white px-4 py-2 rounded-md hover:bg-[#0ABF7D] transition-colors"
+          onClick={scrollToSection('slack')}
+          className="bg-brand-primary text-white px-4 py-2 rounded-md hover:bg-brand-primary-dark transition-colors"
         >
           Join Us
-        </Link>
+        </a>
       </div>
     </header>
   );

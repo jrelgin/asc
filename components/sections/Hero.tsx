@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from '../ui/Button';
-import ImageGallery from '../ui/ImageGallery';
+import VerticalScrollGallery from '../ui/VerticalScrollGallery';
 
 const Hero = () => {
   // This would eventually come from TinaCMS
@@ -18,6 +18,10 @@ const Hero = () => {
       { src: '/assets/images/temp4hero/66e871553b799f9c879a2407_new-p-800.jpg', alt: 'Community event' },
       { src: '/assets/images/temp4hero/66e871553b799f9c879a2407_new-p-800.jpg', alt: 'Community member at computer' },
       { src: '/assets/images/temp4hero/66e871553b799f9c879a2407_new-p-800.jpg', alt: 'Community meeting' },
+      { src: '/assets/images/temp4hero/66e871553b799f9c879a2407_new-p-800.jpg', alt: 'Community workshop' },
+      { src: '/assets/images/temp4hero/66e871553b799f9c879a2407_new-p-800.jpg', alt: 'Community presentation' },
+      { src: '/assets/images/temp4hero/66e871553b799f9c879a2407_new-p-800.jpg', alt: 'Community gathering' },
+      { src: '/assets/images/temp4hero/66e871553b799f9c879a2407_new-p-800.jpg', alt: 'Community discussion' },
     ]
   };
 
@@ -39,10 +43,11 @@ const Hero = () => {
           />
         </div>
         
-        <div className="mt-10 lg:mt-0">
-          <ImageGallery 
+        <div className="mt-10 lg:mt-0 overflow-hidden rounded-lg">
+          <VerticalScrollGallery 
             images={heroContent.images}
             className="w-full"
+            speed={50}
           />
         </div>
       </div>

@@ -1,0 +1,83 @@
+.verticalScrollGalleryContainer {
+  position: relative;
+  width: 100%;
+  height: 540px; /* Container height, can be adjusted */
+  overflow: hidden;
+}
+
+.verticalScrollGalleryInner {
+  display: flex;
+  gap: 16px;
+  position: absolute;
+  width: 100%;
+  animation: scrollVertical linear infinite;
+  will-change: transform;
+}
+
+@keyframes scrollVertical {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%); /* Move up by half the content height */
+  }
+}
+
+/* Animation is paused by default */
+.verticalScrollGalleryInner.paused {
+  animation-play-state: paused;
+}
+
+/* Animation is running when in view */
+.verticalScrollGalleryInner.running {
+  animation-play-state: running;
+}
+
+/* Column styles */
+.column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Staggered column - starts with a partial image at the top */
+.staggeredColumn {
+  /* Negative offset to show partial image at the top */
+  margin-top: -184.5px; /* Negative half of 369px */
+}
+
+.galleryImageWrapper {
+  padding-bottom: 16px;
+}
+
+.galleryImage {
+  position: relative;
+  width: 100%;
+  /* Aspect ratio 308:369 */
+  padding-top: calc(369 / 308 * 100%);
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 768px) {
+  .verticalScrollGalleryContainer {
+    height: 480px;
+  }
+  .galleryImageWrapper {
+    padding-bottom: 12px;
+  }
+  .verticalScrollGalleryInner {
+    /* Switch to single column for mobile */
+    flex-direction: column;
+    gap: 12px;
+  }
+  /* Hide the second column on mobile */
+  .staggeredColumn {
+    display: none;
+  }
+  /* Double the width of first column to fill space */
+  .column:first-child {
+    width: 100%;
+  }
+}

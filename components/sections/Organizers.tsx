@@ -5,53 +5,54 @@ const Organizers = () => {
   // This would eventually come from TinaCMS
   const content = {
     title: 'Our Organizers',
-    description: 'Meet the team that brings our community together.',
     team: [
       {
-        name: 'Sarah Smith',
-        role: 'Community Lead',
-        image: '/placeholder-person-1.jpg',
-        bio: 'Passionate about building supportive communities for independent professionals.'
+        name: 'Pame Barba',
+        role: 'Organizational Coach',
+        company: 'Hola Pame',
+        image: '/assets/images/temp4hero/lex.jpeg',
+        bio: 'Pame is an organizational coach and consultant. She writes start something! A newsletter for creative humans who want to design a better future.'
       },
       {
-        name: 'Alexander Chen',
-        role: 'Events Coordinator',
-        image: '/placeholder-person-2.jpg',
-        bio: 'Organizes our monthly meetups and special community events.'
+        name: 'Laura Green',
+        role: 'Strategist',
+        company: 'Impact Vector',
+        image: '/assets/images/temp4hero/lex.jpeg',
+        bio: 'Laura is a mother, gardener, and chart nerd strategizing growth that means more than money - especially for nonprofits & entrepreneurs who want to run businesses without becoming business people.'
       },
       {
-        name: 'Ellie Taylor',
-        role: 'Content Strategist',
-        image: '/placeholder-person-3.jpg',
-        bio: 'Creates valuable resources and content for our community members.'
+        name: 'Lex Roman',
+        role: 'UX Designer',
+        company: 'Website',
+        image: '/assets/images/temp4hero/lex.jpeg',
+        bio: 'Lex Roman empowers creatives to book more clients through the art and science of marketing experimentation.'
       },
       {
-        name: 'James Lee',
-        role: 'Member Relations',
-        image: '/placeholder-person-4.jpg',
-        bio: 'Ensures our community is inclusive and supportive for all members.'
+        name: 'Jason Elgin',
+        role: 'UX Designer',
+        company: 'Signal Lantern',
+        image: '/assets/images/temp4hero/lex.jpeg',
+        bio: 'Atlanta-based UX designer with expertise in digital products. Enjoys running, gardening, & drawing.'
       }
     ]
   };
 
   return (
-    <section id="organizers" className="py-16 px-6 md:px-12 bg-yellow-50">
+    <section id="organizers" className="py-20 md:py-28 px-6 md:px-12 bg-[#FDF3E1]">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold">
             {content.title}
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            {content.description}
-          </p>
         </div>
         
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {content.team.map((person, index) => (
             <PersonCard
               key={index}
               name={person.name}
               role={person.role}
+              company={person.company}
               image={person.image}
               bio={person.bio}
             />

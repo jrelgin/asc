@@ -44,7 +44,7 @@ const Footer = () => {
             <div className="space-y-4">
               <Link 
                 href="#slack" 
-                className="inline-block bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 transition-colors"
+                className="inline-block bg-[#0FD18B] text-white px-4 py-2 rounded-md hover:bg-[#0ABF7D] transition-colors"
               >
                 Join Our Slack
               </Link>

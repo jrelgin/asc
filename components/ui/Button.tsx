@@ -21,9 +21,9 @@ const Button = ({
   const baseStyles = 'inline-block rounded-md font-medium transition-colors';
   
   const variantStyles = {
-    primary: 'bg-green-500 text-white hover:bg-green-600',
+    primary: 'bg-[#0FD18B] text-white hover:bg-[#0ABF7D]',
     secondary: 'bg-blue-500 text-white hover:bg-blue-600',
-    outline: 'border border-green-500 text-green-500 hover:bg-green-50',
+    outline: 'border border-[#0FD18B] text-[#0FD18B] hover:bg-[#E6F7F4]',
   };
   
   const sizeStyles = {

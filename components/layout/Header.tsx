@@ -33,7 +33,7 @@ const Header = () => {
       <div className="flex space-x-4">
         <Link 
           href="#slack" 
-          className="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 transition-colors"
+          className="bg-[#0FD18B] text-white px-4 py-2 rounded-md hover:bg-[#0ABF7D] transition-colors"
         >
           Join Us
         </Link>

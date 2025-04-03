@@ -22,7 +22,7 @@ const WhyJoin = () => {
   return (
     <section id="why-join" className="py-20 md:py-28 px-6 md:px-12 bg-[#E6F7F4]">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
-        <div className="relative h-[420px] lg:h-[480px] rounded-lg overflow-hidden shadow-md">
+        <div className="relative aspect-square rounded-lg overflow-hidden shadow-md">
           <Image
             src={content.image}
             alt="Community members having a conversation"
